@@ -2,6 +2,7 @@
 // KORISNIK UNOSI BROJ UCENIKA I PREDMETA A ZATIM
 // NJIHOVE OCENE, UCENIK PO UCENIK
 // PRIKAZATI POSECENE OCENE UCENIKA
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #define MAXUC 35
 #define MAXPR 20
@@ -11,15 +12,15 @@ int main()
 	int ocene[MAXUC][MAXPR];
 	int i, j;
 	printf("Unesite broj ucenika (max 35): ");
-	scanf_s("%d", &bruc);
+	scanf("%d", &bruc);
 	printf("Unesite broj predmeta (max 20): ");
-	scanf_s("%d", &brpr);
+	scanf("%d", &brpr);
 	// Unos matrice ocena
 	for (i = 0; i < bruc; i++)
 	{
 		printf("Unesite ocene za ucenika %d: ", i + 1);
 		for (j = 0; j < brpr; j++)
-			scanf_s("%d", &ocene[i][j]);
+			scanf("%d", &ocene[i][j]);
 	}
 	// Prikaz matrice ocena
 	for (i = 0; i < bruc; i++)
